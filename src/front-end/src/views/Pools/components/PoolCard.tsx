@@ -171,7 +171,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
                 <StyledActionSpacer />
                 {!isOldSyrup && (
                   <IconButton  className='unlockButton' disabled={isFinished && sousId !== 0} onClick={onPresentDeposit}>
-                    <AddIcon color="secondary" />
+                    <AddIcon color="primary" />
                   </IconButton>
                 )}
               </>

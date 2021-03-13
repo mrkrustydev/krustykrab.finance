@@ -9,7 +9,7 @@ const useTheme = () => {
   
   theme.colors = 
   {
-    primary: isDark?'#e7e8fc':'#ffffff',
+    primary: isDark?'#e7e8fc':'#000000',
     primaryBright: '#ffa500',
     primaryDark: '#38220f',
     secondary: isDark?'#919dde':'#4764c5',

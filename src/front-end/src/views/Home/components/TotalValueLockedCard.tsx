@@ -15,9 +15,9 @@ const StyledTotalValueLockedCard = styled(Card)`
   align-items: center;
   display: flex;
   flex: 1;
-  border-style:none;
-  border-width:1px;
-  border-color:red;
+  border-radius: 0px;
+  border: 1px solid ${({ theme }) => theme.isDark ? "#ff5b37" : "#b13f26"};
+
   box-shadow:none;
 `
 

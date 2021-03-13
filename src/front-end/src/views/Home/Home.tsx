@@ -99,9 +99,17 @@ const Home: React.FC = () => {
               <FarmStakingCard />
             </Col>
             <Col xs={16} md={6} className='colStyles'>
-              <CakeStats />
+              <Col >
+                <CakeStats />
+              </Col>
+              <Col style={{paddingTop:'1vh'}}>
+                <TotalValueLockedCard />
+              </Col>
+
+              
             </Col>
           </Row>
+          
         </Grid>
 
 

@@ -74,12 +74,9 @@ const CakeStats = () => {
           <Text fontSize="14px">{TranslateString(536, 'Total KRUSTY Supply')}</Text>
           {krustySupply && <CardValue fontSize="14px" value={krustySupply} />}
         </Row>
-        <Row>
+        <Row >
           <Text fontSize="14px">{TranslateString(540, 'New KRUSTY/block')}</Text>
           <CardValue fontSize="14px" decimals={1} value={krustyPerBlock.toNumber()} />
-        </Row>
-        <Row>
-          <TotalValueLockedCard />
         </Row>
       </CardBody>
     </StyledCakeStats>

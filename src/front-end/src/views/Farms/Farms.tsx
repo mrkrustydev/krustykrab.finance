@@ -46,31 +46,35 @@ const Farms: React.FC = () => {
         if (!farm.tokenAmount || !farm.lpTotalInQuoteToken || !farm.lpTotalInQuoteToken) {
           return farm
         }
-        
-        const krustyRewardPerBlock = KRUSTY_PER_BLOCK.times(farm.poolWeight)
+
+        console.log(farm)
+        console.log(`bnb price: ${bnbPrice}`)
+        console.log(`krustyPrice: ${krustyPrice}`)
+        console.log(`krustyPriceVsBNB: ${krustyPriceVsBNB}`)
+
+        const krustyRewardPerBlock = KRUSTY_PER_BLOCK.times(new BigNumber(farm.poolWeight)) // .div(new BigNumber(10).pow(18))
         const krustyRewardPerYear = krustyRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        // krustyPriceInQuote * krustyRewardPerYear / lpTotalInQuoteToken
-        let apy = krustyPriceVsBNB.times(krustyRewardPerYear).div(farm.lpTotalInQuoteToken)
+        console.log(`krustyRewardPerBlock: ${krustyRewardPerBlock}`)
+        console.log(`krustyRewardPerYear: ${krustyRewardPerYear}`)
 
-        if (farm.quoteTokenSymbol === QuoteToken.BUSD || farm.quoteTokenSymbol === QuoteToken.USDT) {
-          apy = krustyPriceVsBNB.times(krustyRewardPerYear).div(farm.lpTotalInQuoteToken).times(bnbPrice)
-        } else if (farm.quoteTokenSymbol === QuoteToken.ETH) {
-          apy = krustyPrice.div(ethPriceUsd).times(krustyRewardPerYear).div(farm.lpTotalInQuoteToken)
-        } else if (farm.quoteTokenSymbol === QuoteToken.KRUSTY) {
-          apy = krustyRewardPerYear.div(farm.lpTotalInQuoteToken)
-        } else if (farm.dual) {
-          const krustyApy =
-            farm && krustyPriceVsBNB.times(krustyRewardPerBlock).times(BLOCKS_PER_YEAR).div(farm.lpTotalInQuoteToken)
-          const dualApy =
-            farm.tokenPriceVsQuote &&
-            new BigNumber(farm.tokenPriceVsQuote)
-              .times(farm.dual.rewardPerBlock)
-              .times(BLOCKS_PER_YEAR)
-              .div(farm.lpTotalInQuoteToken)
+        let apy = krustyPrice.times(krustyRewardPerYear);
+        console.log(`${farm.lpSymbol} apy: ${apy}`)
 
-          apy = krustyApy && dualApy && krustyApy.plus(dualApy)
+        let totalValue = new BigNumber(farm.lpTotalInQuoteToken || 0);
+        console.log(`totalValue: ${totalValue}`)
+
+        if (farm.quoteTokenSymbol === QuoteToken.BNB) {
+          totalValue = totalValue.times(bnbPrice);
+
+          console.log(`totalValueBNB: ${totalValue}`)
         }
+
+        if (totalValue.comparedTo(0) > 0) {
+          apy = apy.div(totalValue);
+        }
+
+        console.log(`${farm.lpSymbol} apy: ${apy}`)
 
         return { ...farm, apy }
       })
@@ -104,7 +108,6 @@ const Farms: React.FC = () => {
           </Route>
         </FlexLayout>
       </div>
-     
     </Page>
   )
 }

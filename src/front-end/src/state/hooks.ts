@@ -80,7 +80,11 @@ export const usePoolFromPid = (sousId): Pool => {
 // Prices
 
 export const usePriceBnbBusd = (): BigNumber => {
-  return new BigNumber(130) // farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : new BigNumber(130)
+  const bnbBusdFarmId = 3;
+  const farm = useFarmFromPid(bnbBusdFarmId)
+  const price = farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : new BigNumber(230)
+  return price
+  // return new BigNumber(230) // farm.tokenPriceVsQuote ? new BigNumber(1).div(farm.tokenPriceVsQuote) : new BigNumber(130)
 }
 
 export const usePriceBusd = (): BigNumber => {

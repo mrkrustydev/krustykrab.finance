@@ -19,6 +19,22 @@ export default {
     56: '',
     97: '0xb3985b3202be3deffbe2aeff67167b24df32822e',
   },
+  wbnb: {
+    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+  },
+  busd: {
+    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+    97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee',
+  },
+  busdBnbLp: {
+    56: '',
+    97: '0x81aca0c535bb13e0cd2f10a3c6e4dc1b9bbe6c0e',
+  },
+  bnbBusdLp: {
+    56: '',
+    97: '0x81aca0c535bb13e0cd2f10a3c6e4dc1b9bbe6c0e',
+  },
   cakeBnbLp: {
     56: '0xa527a61703d82139f8a06bc30097cc9caa2df5a6',
     97: ''
@@ -29,14 +45,6 @@ export default {
   },
   bifi: {
     56: '0xCa3F508B8e4Dd382eE878A314789373D80A5190A',
-    97: ''
-  },
-  thugsBnbLp: {
-    56: '0x9354cab0f1083135439b23aa6c364329e578f39a',
-    97: ''
-  },
-  thugs: {
-    56: '0xe10e9822a5de22f8761919310dda35cd997d63c0',
     97: ''
   },
   fuelBnbLp: {
@@ -59,14 +67,6 @@ export default {
     56: '0x55d398326f99059ff775485246999027b3197955',
     97: '0x9B3329115964B163230cf1F7B723f7CE8F1C39E8',
   },
-  busd: {
-    56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-    97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee',
-  },
-  busdBnbLp: {
-    56: '',
-    97: '0x81aCa0c535bb13e0cD2F10A3c6E4DC1b9Bbe6c0e',
-  },
   cake: {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     97: '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
@@ -82,10 +82,6 @@ export default {
   sousChef: {
     56: '0x6ab8463a4185b80905e05a9ff80a2d6b714b9e95',
     97: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-  },
-  wbnb: {
-    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
-    97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
   },
   lottery: {
     56: '0x3C3f2049cc17C136a604bE23cF7E42745edf3b91',

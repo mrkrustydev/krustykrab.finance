@@ -91,6 +91,17 @@ interface FarmCardProps {
   account?: string
 }
 
+const fmt = {
+  prefix: '',
+  decimalSeparator: '.',
+  groupSeparator: ',',
+  groupSize: 3,
+  secondaryGroupSize: 0,
+  fractionGroupSeparator: ' ',
+  fractionGroupSize: 0,
+  suffix: ''
+}
+
 const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPrice, ethPrice, ethereum, account }) => {
   const TranslateString = useI18n()
 
@@ -122,7 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
 
   const lpLabel = farm.displayName 
   const earnLabel = farm.dual ? farm.dual.earnLabel : 'KRUSTY'
-  const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toNumber().toLocaleString('en-US').slice(0, -1)
+  const farmAPY = farm.apy && farm.apy.times(new BigNumber(100)).toFormat(2, fmt) // .toNumber().toLocaleString('en-US').slice(0, -1)
 
   const chainId = process.env.REACT_APP_CHAIN_ID
 

@@ -82,8 +82,6 @@ const CTACards = styled(BaseLayout)`
       grid-column: span 4;
     }
   }
-
-
 `
 
 const Home: React.FC = () => {
@@ -91,7 +89,6 @@ const Home: React.FC = () => {
   const {isDark} = useTheme();
   return (
     <Page>
-
       <div>
         <Grid >
           <Row style={{justifyContent:'stretch'}}>
@@ -105,14 +102,9 @@ const Home: React.FC = () => {
               <Col style={{paddingTop:'1vh'}}>
                 <TotalValueLockedCard />
               </Col>
-
-              
             </Col>
           </Row>
-          
         </Grid>
-
-
       </div>
     </Page>
   )

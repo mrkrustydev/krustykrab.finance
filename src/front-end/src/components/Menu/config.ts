@@ -6,20 +6,20 @@ const config: MenuEntry[] = [
     icon: 'HomeIcon',
     href: '/',
   },
-  // {
-  //   label: 'Trade',
-  //   icon: 'TradeIcon',
-  //   items: [
-  //     {
-  //       label: 'Exchange',
-  //       href: 'https://exchange.pancakeswap.finance',
-  //     },
-  //     {
-  //       label: 'Liquidity',
-  //       href: 'https://exchange.pancakeswap.finance/#/pool',
-  //     },
-  //   ],
-  // },
+  {
+    label: 'Trade',
+    icon: 'TradeIcon',
+    items: [
+      {
+        label: 'Exchange',
+        href: 'https://exchange.quizzical-wescoff-5d3d4e.netlify.app/#/swap',
+      },
+      {
+        label: 'Liquidity',
+        href: 'https://exchange.quizzical-wescoff-5d3d4e.netlify.app/#/pool',
+      },
+    ],
+  },
   {
     label: 'Farms',
     icon: 'FarmIcon',

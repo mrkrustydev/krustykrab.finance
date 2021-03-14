@@ -8,8 +8,8 @@ export default {
     97: '0x11c1fD0101f53451F6dC6DFB6Fe6aFE5fD100E21',
   },
   mrKrabs: {
-    56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    97: '0x94882Bb165Ff3C0393441156BA3035D835a614Ed',
+    56: '0x94882Bb165Ff3C0393441156BA3035D835a614Ed',
+    97: '0x0f5b314aCABE9886dd9a8C961E5aa834Dd3656eA',
   },
   krustyBnbLp: {
     56: '0x764091cd19fba64b978e8efe5b8d40ddbe704f3c',
@@ -27,12 +27,12 @@ export default {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee',
   },
-  busdBnbLp: {
-    56: '',
+  bnbBusdLp: {
+    56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
     97: '0x81aca0c535bb13e0cd2f10a3c6e4dc1b9bbe6c0e',
   },
-  bnbBusdLp: {
-    56: '',
+  busdBnbLp: {
+    56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
     97: '0x81aca0c535bb13e0cd2f10a3c6e4dc1b9bbe6c0e',
   },
   cakeBnbLp: {

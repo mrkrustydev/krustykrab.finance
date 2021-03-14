@@ -68,9 +68,6 @@ const CakeStats = () => {
           {TranslateString(534, 'Krusty Krab Stats')}
         </Heading>
         <Row>
-          <StyledLinkExternal fontSize="18px" href={buyKrustyUrl}>{TranslateString(536, 'Looking to buy KRUSTY? Click Here')}</StyledLinkExternal>
-        </Row>
-        <Row>
           <Text fontSize="14px">{TranslateString(536, 'Total KRUSTY Supply')}</Text>
           {krustySupply && <CardValue fontSize="14px" value={krustySupply} />}
         </Row>

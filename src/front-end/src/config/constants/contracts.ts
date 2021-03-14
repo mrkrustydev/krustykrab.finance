@@ -23,6 +23,30 @@ export default {
     56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
   },
+  ada: {
+    56: '0x3ee2200efb3400fabb9aacf31297cbdd1d435d47',
+    97: '0x3ee2200efb3400fabb9aacf31297cbdd1d435d47'
+  },
+  adaBnbLp: {
+    56: '0xba51d1ab95756ca4eab8737ecd450cd8f05384cf',
+    97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
+  },
+  auto: {
+    56: '0xa184088a740c695e156f91f5cc086a06bb78b827',
+    97: '',
+  },
+  autoBnbLp: {
+    56: '0x4d0228ebeb39f6d2f29ba528e2d15fc9121ead56',
+    97: '',
+  },
+  btcb: {
+    56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+    97: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+  },
+  btcbBnbLp: {
+    56: '0x7561eee90e24f3b348e1087a005f78b4c8453524',
+    97: '0x7561eee90e24f3b348e1087a005f78b4c8453524',
+  },
   busd: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee',
@@ -47,25 +71,81 @@ export default {
     56: '0xCa3F508B8e4Dd382eE878A314789373D80A5190A',
     97: ''
   },
-  fuelBnbLp: {
-    56: '0xd26092c6ce6fb359302a9453dc0c7f312794ef7e',
-    97: ''
+  dai: {
+    56: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
+    97: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
+  },
+  daiBusdLp: {
+    56: '0x3ab77e40340ab084c3e23be8e5a6f7afed9d41dc',
+    97: '0x3ab77e40340ab084c3e23be8e5a6f7afed9d41dc',
+  },
+  dot: {
+    56: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402',
+    97: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402'
+  },
+  dotBnbLp: {
+    56: '0xbcd62661a6b1ded703585d3af7d7649ef4dcdb5c',
+    97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
+  },
+  eth: {
+    56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
+    97: '0x2170ed0880ac9a755fd29b2688956bd959f933f8'
+  },
+  ethBnbLp: {
+    56: '0x70d8929d04b60af4fb9b58713ebcf18765ade422',
+    97: '0x70d8929d04b60af4fb9b58713ebcf18765ade422'
   },
   fuel: {
     56: '0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a',
     97: ''
   },
-  linkBnbLp: {
-    56: '0xaebe45e3a03b734c68e5557ae04bfc76917b4686',
+  fuelBnbLp: {
+    56: '0x3763A3263CEaca5e7Cc1Bc22A43920bAd9f743Cd',
     97: ''
   },
-  link: {
-    56: '0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd',
-    97: ''
+  hypr: {
+    56: '0x03d6bd3d48f956d783456695698c407a46ecd54d',
+    97: '',
+  },
+  hyprBnbLp: {
+    56: '0x3701cfe08a3f0b629dbcaeceba773a8b4f0044e3',
+    97: '',
+  },
+  usdc: {
+    56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
+    97: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d'
+  },
+  usdcBnbLp: {
+    56: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd',
+    97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
+  },
+  usdcBusdLp: {
+    56: '0x680dd100e4b394bda26a59dd5c119a391e747d18',
+    97: '0x9B3329115964B163230cf1F7B723f7CE8F1C39E8',
   },
   usdt: {
     56: '0x55d398326f99059ff775485246999027b3197955',
     97: '0x9B3329115964B163230cf1F7B723f7CE8F1C39E8',
+  },
+  usdtBusdLp: {
+    56: '0xc15fa3e22c912a276550f3e5fe3b0deb87b55acd',
+    97: '0x9B3329115964B163230cf1F7B723f7CE8F1C39E8',
+  },
+  thugsBnbLp: {
+    56: '0x9354cab0f1083135439b23aa6c364329e578f39a',
+    97: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149'
+  },
+  thugs: {
+    56: '0xe10e9822a5de22f8761919310dda35cd997d63c0',
+    97: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149'
+  },
+  linkBnbLp: {
+    56: '0xaebe45e3a03b734c68e5557ae04bfc76917b4686',
+    97: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149'
+  },
+  link: {
+    56: '0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd',
+    97: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149'
   },
   cake: {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
@@ -106,10 +186,6 @@ export default {
   rabbitMintingFarm: {
     56: '0x1C99222F857C1d72234703eC5b9Ed88089Bd7091',
     97: '0x8f4739a48883Fdd89b65DC245dD5774fC8f44a67',
-  },
-  eth: {
-    56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    97: '0xd66c6b4f0be8ce5b39d52e0fd1344c389929b378',
   },
   claimRefund: {
     56: '0xE7e53A7e9E3Cf6b840f167eF69519175c497e149',

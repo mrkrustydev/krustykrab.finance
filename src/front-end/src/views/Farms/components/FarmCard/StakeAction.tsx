@@ -15,6 +15,7 @@ interface FarmCardActionsProps {
   tokenName?: string
   pid?: number
   addLiquidityUrl?: string
+  isSingleAsset?: boolean
 }
 
 const IconButtonWrapper = styled.div`
@@ -30,6 +31,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
   tokenName,
   pid,
   addLiquidityUrl,
+  isSingleAsset
 }) => {
   const TranslateString = useI18n()
   const { onStake } = useStake(pid)
@@ -47,7 +49,7 @@ const StakeAction: React.FC<FarmCardActionsProps> = ({
 
   const renderStakingButtons = () => {
     return rawStakedBalance === 0 ? (
-      <Button onClick={onPresentDeposit}>{TranslateString(999, 'Stake LP')}</Button>
+      <Button onClick={onPresentDeposit}>{TranslateString(999, isSingleAsset ? 'Stake' : 'Stake LP')}</Button>
     ) : (
       <IconButtonWrapper>
         <IconButton variant="tertiary" onClick={onPresentWithdraw} mr="6px" className='cancelButton'>

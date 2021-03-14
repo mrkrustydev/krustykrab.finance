@@ -17,7 +17,11 @@ import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
 import { Image, Heading } from '../../pancake-uikit/src'
 
-const Farms: React.FC = () => {
+export interface FarmsProps {
+  singleAssetMode?: boolean
+}
+
+const Farms: React.FC<FarmsProps> = (farmProps) => {
   const { path } = useRouteMatch()
   const TranslateString = useI18n()
   const farmsLP = useFarms()
@@ -25,6 +29,7 @@ const Farms: React.FC = () => {
   const bnbPrice = usePriceBnbBusd()
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const ethPriceUsd = usePriceEthBusd()
+  const { singleAssetMode } = farmProps;
 
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
@@ -34,8 +39,8 @@ const Farms: React.FC = () => {
     }
   }, [account, dispatch, fastRefresh])
 
-  const activeFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier !== '0X')
-  const inactiveFarms = farmsLP.filter((farm) => farm.pid !== 0 && farm.multiplier === '0X')
+  const activeFarms = farmsLP.filter((farm) => !!farm.isSingleAsset === !!singleAssetMode &&  farm.multiplier !== '0X')
+  const inactiveFarms = farmsLP.filter((farm) => !!farm.isSingleAsset === !!singleAssetMode &&  farm.multiplier === '0X')
 
   // /!\ This function will be removed soon
   // This function compute the APY for each farm and will be replaced when we have a reliable API
@@ -47,34 +52,20 @@ const Farms: React.FC = () => {
           return farm
         }
 
-        console.log(farm)
-        console.log(`bnb price: ${bnbPrice}`)
-        console.log(`krustyPrice: ${krustyPrice}`)
-        console.log(`krustyPriceVsBNB: ${krustyPriceVsBNB}`)
-
         const krustyRewardPerBlock = KRUSTY_PER_BLOCK.times(new BigNumber(farm.poolWeight)) // .div(new BigNumber(10).pow(18))
         const krustyRewardPerYear = krustyRewardPerBlock.times(BLOCKS_PER_YEAR)
 
-        console.log(`krustyRewardPerBlock: ${krustyRewardPerBlock}`)
-        console.log(`krustyRewardPerYear: ${krustyRewardPerYear}`)
-
         let apy = krustyPrice.times(krustyRewardPerYear);
-        console.log(`${farm.lpSymbol} apy: ${apy}`)
 
         let totalValue = new BigNumber(farm.lpTotalInQuoteToken || 0);
-        console.log(`totalValue: ${totalValue}`)
 
         if (farm.quoteTokenSymbol === QuoteToken.BNB) {
           totalValue = totalValue.times(bnbPrice);
-
-          console.log(`totalValueBNB: ${totalValue}`)
         }
 
         if (totalValue.comparedTo(0) > 0) {
           apy = apy.div(totalValue);
         }
-
-        console.log(`${farm.lpSymbol} apy: ${apy}`)
 
         return { ...farm, apy }
       })

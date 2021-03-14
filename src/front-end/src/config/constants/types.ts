@@ -20,14 +20,22 @@ export interface Ifo {
 }
 
 export enum QuoteToken {
-  'BNB' = 'BNB',
-  'CAKE' = 'CAKE',
-  'SYRUP' = 'SYRUP',
-  'BUSD' = 'BUSD',
-  'TWT' = 'TWT',
-  'USDT' = 'USDT',
-  'ETH' = 'ETH',
-  'KRUSTY' = 'KRUSTY'
+  'ADA'     = 'ADA',
+  'AUTO'    = 'AUTO',
+  'BNB'     = 'BNB',
+  'BTCB'    = 'BTCB',
+  'BUSD'    = 'BUSD',
+  'CAKE'    = 'CAKE',
+  'DAI'     = 'DAI',
+  'DOT'     = 'DOT',
+  'ETH'     = 'ETH',
+  'FUEL'    = 'FUEL',
+  'KRUSTY'  = 'KRUSTY',
+  'SYRUP'   = 'SYRUP',
+  'TWT'     = 'TWT',
+  'USDC'    = 'USDC',
+  'USDT'    = 'USDT',
+  'WBNB'    = 'WBNB',
 }
 
 export enum PoolCategory {
@@ -61,7 +69,9 @@ export interface FarmConfig {
     97: string
   }
   displayName?: string,
-  image?: string
+  image?: string,
+  depositFee?: number,
+  isSingleAsset?: boolean
 }
 
 export interface PoolConfig {

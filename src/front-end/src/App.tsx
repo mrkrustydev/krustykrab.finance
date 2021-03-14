@@ -56,7 +56,7 @@ const App: React.FC = () => {
               <Farms />
             </Route>
             <Route path="/staking">
-              <Pools />
+              <Farms singleAssetMode />
             </Route>
             {/*
             <Route path="/lottery">

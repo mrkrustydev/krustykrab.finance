@@ -9,6 +9,7 @@ export interface ExpandableSectionProps {
   isCommunityFarm?: boolean
   farmImage?: string
   tokenSymbol?: string
+  depositFee?: number
 }
 
 const Wrapper = styled(Flex)`
@@ -29,6 +30,7 @@ const CardHeading: React.FC<ExpandableSectionProps> = ({
   isCommunityFarm,
   farmImage,
   tokenSymbol,
+  depositFee,
 }) => {
   return (
     <Wrapper justifyContent="space-between" alignItems="center" mb="12px">

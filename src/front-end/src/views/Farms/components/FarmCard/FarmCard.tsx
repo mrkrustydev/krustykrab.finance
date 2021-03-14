@@ -146,6 +146,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
         isCommunityFarm={farm.isCommunity}
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
+        depositFee={farm.depositFee}
       />
       {!removed && (
         <Flex justifyContent="space-between" alignItems="center">
@@ -153,8 +154,8 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
           <Text bold style={{ display: 'flex', alignItems: 'center' }}>
             {farm.apy ? (
               <>
-                <ApyButton lpLabel={lpLabel} addLiquidityUrl={farm.lpAddUrl[chainId]} krustyPrice={krustyPrice} apy={farm.apy} />
                 {farmAPY}%
+                <ApyButton lpLabel={lpLabel} addLiquidityUrl={farm.lpAddUrl[chainId]} krustyPrice={krustyPrice} apy={farm.apy} />
               </>
             ) : (
               <Skeleton height={24} width={80} />
@@ -166,6 +167,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
         <Text>{TranslateString(318, 'Earn')}:</Text>
         <Text bold>{earnLabel}</Text>
       </Flex>
+      <Flex justifyContent='space-between'>
+        <Text style={{ fontSize: '24px' }}>{TranslateString(10001, 'Deposit Fee')}:</Text>
+        <Text bold style={{ fontSize: '24px' }}>{(farm.depositFee ? farm.depositFee / 100 : 0)}%</Text>
+      </Flex>
       <CardActionsContainer farm={farm} ethereum={ethereum} account={account} addLiquidityUrl={farm.lpAddUrl[chainId]} />
       <Divider />
       <ExpandableSectionButton
@@ -175,7 +180,12 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
       <ExpandingWrapper expanded={showExpandableSection}>
         <DetailsSection
           removed={removed}
-          bscScanAddress={`https://bscscan.com/address/${farm.lpAddresses[process.env.REACT_APP_CHAIN_ID]}`}
+          bscScanAddress={
+            farm.isSingleAsset ?
+              `https://bscscan.com/token/${farm.tokenAddresses[chainId]}`
+              :
+              `https://bscscan.com/token/${farm.lpAddresses[chainId]}`
+          }
           totalValueFormated={totalValueFormated}
           lpLabel={lpLabel}
           addLiquidityUrl={farm.lpAddUrl[chainId]}

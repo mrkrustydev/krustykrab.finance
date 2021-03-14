@@ -68,12 +68,18 @@ const CakeStats = () => {
           {TranslateString(534, 'Krusty Krab Stats')}
         </Heading>
         <Row>
-          <Text fontSize="14px">{TranslateString(536, 'Total KRUSTY Supply')}</Text>
-          {krustySupply && <CardValue fontSize="14px" value={krustySupply} />}
+          <Text fontSize="14px" style={{width:'40%', display:'inline-flex'}}>{TranslateString(536, 'Total KRUSTY Supply')}</Text>
+          {krustySupply && 
+          <div style={{width:'60%', display:'inline-flex'}}>
+            <CardValue fontSize="14px" value={krustySupply} />
+          </div>
+          }
         </Row>
         <Row >
-          <Text fontSize="14px">{TranslateString(540, 'New KRUSTY/block')}</Text>
-          <CardValue fontSize="14px" decimals={1} value={krustyPerBlock.toNumber()} />
+          <Text style={{width:'40%', display:'inline-flex'}} fontSize="14px">{TranslateString(540, 'New KRUSTY/block')}</Text>
+          <div style={{width:'60%', display:'inline-flex'}}>
+            <CardValue fontSize="14px" decimals={1} value={krustyPerBlock.toNumber()} />
+          </div>
         </Row>
       </CardBody>
     </StyledCakeStats>

@@ -1,22 +1,22 @@
 export default {
   krusty: {
-    56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    56: '0x8E76AEb48747c0C0228a47AD0E6Bbca6648453eE',
     97: '0xD44A4F7D0AF783104c3CD0f8CE19013367EF5D4D',
   },
   patty: {
-    56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    56: '0x138cDCFb04AbA28028DFcBeD2886379eF4F3cf0F',
     97: '0x11c1fD0101f53451F6dC6DFB6Fe6aFE5fD100E21',
   },
   mrKrabs: {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    97: '0x0f5b314aCABE9886dd9a8C961E5aa834Dd3656eA',
+    97: '0x94882Bb165Ff3C0393441156BA3035D835a614Ed',
   },
   krustyBnbLp: {
-    56: '',
+    56: '0x764091cd19fba64b978e8efe5b8d40ddbe704f3c',
     97: '0x5add30649eec3d78d3c5065f01eae2d3a15f5f0f',
   },
   krustyBusdLp: {
-    56: '',
+    56: '0x3808a9632f64d38be907d33fa37cf6d7efedd071',
     97: '0xb3985b3202be3deffbe2aeff67167b24df32822e',
   },
   krustyUsdtLp: {

@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.quizzical-wescoff-5d3d4e.netlify.app/#/swap',
+        href: 'https://practical-mclean-0711a0.netlify.app/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.quizzical-wescoff-5d3d4e.netlify.app/#/pool',
+        href: 'https://practical-mclean-0711a0.netlify.app/#/pool',
       },
     ],
   },

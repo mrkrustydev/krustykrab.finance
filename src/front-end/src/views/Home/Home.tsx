@@ -13,6 +13,7 @@ import {Grid, Col, Row } from 'react-flexbox-grid'
 import { Heading, Text, BaseLayout, Svg } from '../../pancake-uikit/src'
 import useTheme from '../../hooks/useTheme'
 import TwitterCard from './components/TwitterCard'
+import YoutubeVideoCard from './components/YoutubeVideo'
 
 
 const Hero = styled.div`
@@ -102,10 +103,11 @@ const Home: React.FC = () => {
           </Row>
           <Row style={{ justifyContent: 'stretch' }}>
             <Col xs={16} md={6} className='colStyles' >
+              <TotalValueLockedCard />
               <CakeStats />
             </Col>
             <Col xs={16} md={6} className='colStyles'>
-              <TotalValueLockedCard />
+              <YoutubeVideoCard />
             </Col>
           </Row>
         </Grid>

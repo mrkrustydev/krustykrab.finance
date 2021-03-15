@@ -12,6 +12,7 @@ import WinCard from 'views/Home/components/WinCard'
 import {Grid, Col, Row } from 'react-flexbox-grid'
 import { Heading, Text, BaseLayout, Svg } from '../../pancake-uikit/src'
 import useTheme from '../../hooks/useTheme'
+import TwitterCard from './components/TwitterCard'
 
 
 const Hero = styled.div`
@@ -96,12 +97,15 @@ const Home: React.FC = () => {
               <FarmStakingCard />
             </Col>
             <Col xs={16} md={6} className='colStyles'>
-              <Col >
-                <CakeStats />
-              </Col>
-              <Col style={{paddingTop:'1vh'}}>
-                <TotalValueLockedCard />
-              </Col>
+              <TwitterCard />
+            </Col>
+          </Row>
+          <Row style={{ justifyContent: 'stretch' }}>
+            <Col xs={16} md={6} className='colStyles' >
+              <CakeStats />
+            </Col>
+            <Col xs={16} md={6} className='colStyles'>
+              <TotalValueLockedCard />
             </Col>
           </Row>
         </Grid>

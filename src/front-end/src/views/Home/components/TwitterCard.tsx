@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Card, CardBody, Heading, Text } from '@pancakeswap-libs/uikit'
-import styled from 'styled-components'
+import styled, {ThemeContext} from 'styled-components'
 import { Timeline } from 'react-twitter-widgets'
 import useI18n from 'hooks/useI18n'
 
@@ -21,7 +21,7 @@ const Row = styled.div`
 
 const TwitterCard = () => {
   const TranslateString = useI18n()
-
+  const theme = useContext(ThemeContext)
   return (
     <StyledTwitterCard>
       <CardBody>
@@ -36,7 +36,9 @@ const TwitterCard = () => {
           options={{
             height: '300',
             chrome: "noheader, nofooter",
-            width: "400"
+            width: "400",
+            borderColor:'#a1adee',
+            theme:`${ theme.isDark? 'dark':'light'}`
           }}
         />
       </CardBody>

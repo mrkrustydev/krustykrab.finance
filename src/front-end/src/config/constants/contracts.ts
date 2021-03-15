@@ -31,12 +31,20 @@ export default {
     56: '0xba51d1ab95756ca4eab8737ecd450cd8f05384cf',
     97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
   },
+  adaBusdLp: {
+    56: '0xf35145e28e1dd67055221739d8554e0b5c7adcd5',
+    97: ''
+  },
   auto: {
     56: '0xa184088a740c695e156f91f5cc086a06bb78b827',
     97: '',
   },
   autoBnbLp: {
     56: '0x4d0228ebeb39f6d2f29ba528e2d15fc9121ead56',
+    97: '',
+  },
+  autoBusdLp: {
+    56: '0x7723fe13747cf31496da38c5038160a40200bf8e',
     97: '',
   },
   btcb: {
@@ -46,6 +54,10 @@ export default {
   btcbBnbLp: {
     56: '0x7561eee90e24f3b348e1087a005f78b4c8453524',
     97: '0x7561eee90e24f3b348e1087a005f78b4c8453524',
+  },
+  btcbBusdLp: {
+    56: '0xb8875e207ee8096a929d543c9981c9586992eacb',
+    97: '',
   },
   busd: {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
@@ -84,7 +96,11 @@ export default {
     97: '0x7083609fce4d1d8dc0c979aab8c869ea2c873402'
   },
   dotBnbLp: {
-    56: '0xbcd62661a6b1ded703585d3af7d7649ef4dcdb5c',
+    56: '0xbcd62661a6b1ded703585d3af7d7649ef4dcdb5c', 
+    97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
+  },
+  dotBusdLp: {
+    56: '0x54c1ec2f543966953f2f7564692606ea7d5a184e',
     97: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd'
   },
   eth: {
@@ -105,6 +121,10 @@ export default {
   },
   fuelBnbLp: {
     56: '0x3763A3263CEaca5e7Cc1Bc22A43920bAd9f743Cd',
+    97: ''
+  },
+  fuelBusdLp: {
+    56: '0x73753c4322e0d595b5053708dc548f8a62159b37',
     97: ''
   },
   hypr: {

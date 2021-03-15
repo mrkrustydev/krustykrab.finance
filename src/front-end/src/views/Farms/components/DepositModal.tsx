@@ -4,7 +4,18 @@ import ModalActions from 'components/ModalActions'
 import ModalInput from 'components/ModalInput'
 import useI18n from 'hooks/useI18n'
 import { getFullDisplayBalance } from 'utils/formatBalance'
+import styled from 'styled-components'
 import { Button, Modal, LinkExternal } from '../../../pancake-uikit/src'
+
+
+const Paragraph = styled.p`
+color: ${({ theme }) => theme.isDark ? "#ff5b37" : "#b13f26"};
+text-align: right;
+`
+
+const FinePrint = styled.div`
+margin-top: 5px;
+`
 
 interface DepositModalProps {
   max: BigNumber
@@ -13,9 +24,10 @@ interface DepositModalProps {
   tokenName?: string
   addLiquidityUrl?: string
   depositFee?: number
+  isSingleAsset?: boolean
 }
 
-const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl, depositFee }) => {
+const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl, depositFee, isSingleAsset }) => {
   const [val, setVal] = useState('')
   const [fee, setFee] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
@@ -41,7 +53,13 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   }, [fullBalance, setVal])
 
   return (
-    <Modal title={TranslateString(999, 'Stake LP tokens')} onDismiss={onDismiss}>
+    <Modal 
+      title={
+        isSingleAsset ?
+          TranslateString(999, 'Stake tokens')
+        : TranslateString(999, 'Stake LP tokens')
+      } 
+      onDismiss={onDismiss}>
       <ModalInput
         value={val}
         onSelectMax={handleSelectMax}
@@ -51,11 +69,11 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
         addLiquidityUrl={addLiquidityUrl}
         inputTitle={TranslateString(999, 'Stake')}
       />
-      {depositFee ? 
-      <div>
-          <span>{TranslateString(999, 'Deposit Fee: ')} {fee} {tokenName}</span>
-          <span>{TranslateString(999, 'This fee will be used 100% for buyback and burn.)')}</span>
-      </div>
+      {depositFee && val ? 
+        <FinePrint>
+          <Paragraph>{TranslateString(999, 'Deposit Fee: ')} {fee} {tokenName}</Paragraph>
+          <Paragraph>{TranslateString(999, 'This fee will be used 100% for buyback and burn.')}</Paragraph>
+        </FinePrint>
         :
         <></>
       }

@@ -103,8 +103,8 @@ const Home: React.FC = () => {
           </Row>
           <Row style={{ justifyContent: 'stretch' }}>
             <Col xs={16} md={6} className='colStyles' >
-              <TotalValueLockedCard />
               <CakeStats />
+              <TotalValueLockedCard />
             </Col>
             <Col xs={16} md={6} className='colStyles'>
               <YoutubeVideoCard />

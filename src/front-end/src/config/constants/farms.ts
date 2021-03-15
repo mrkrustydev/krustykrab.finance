@@ -283,57 +283,57 @@ const farms: FarmConfig[] = [
     depositFee: 400,
     isSingleAsset: true
   },
-  // {
-  //   pid: 2400,
-  //   lpSymbol: QuoteToken.BTCB,
-  //   lpAddresses: contracts.btcb,
-  //   tokenSymbol: 'BTCB',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.BTCB,
-  //   quoteTokenAdresses: contracts.btcb,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.btcb[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.btcb[97]}`,
-  //   },
-  //   displayName: 'BTCB Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 25,
-  //   lpSymbol: QuoteToken.DOT,
-  //   lpAddresses: contracts.dot,
-  //   tokenSymbol: 'DOT',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.BTCB,
-  //   quoteTokenAdresses: contracts.btcb,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dot[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dot[97]}`,
-  //   },
-  //   displayName: 'DOT Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 26,
-  //   lpSymbol: QuoteToken.ADA,
-  //   lpAddresses: contracts.ada,
-  //   tokenSymbol: 'ADA',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.ADA,
-  //   quoteTokenAdresses: contracts.ada,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.ada[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.ada[97]}`,
-  //   },
-  //   displayName: 'ADA Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
+  {
+    pid: 25,
+    lpSymbol: QuoteToken.BTCB,
+    lpAddresses: contracts.btcbBnbLp,
+    tokenSymbol: 'BTCB',
+    tokenAddresses: contracts.btcb,
+    quoteTokenSymbol: QuoteToken.BNB,
+    quoteTokenAdresses: contracts.wbnb,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.btcb[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.btcb[97]}`,
+    },
+    displayName: 'BTCB Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 26,
+    lpSymbol: QuoteToken.DOT,
+    lpAddresses: contracts.dotBusdLp,
+    tokenSymbol: 'DOT',
+    tokenAddresses: contracts.dot,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dot[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dot[97]}`,
+    },
+    displayName: 'DOT Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 27,
+    lpSymbol: QuoteToken.ADA,
+    lpAddresses: contracts.adaBusdLp,
+    tokenSymbol: 'ADA',
+    tokenAddresses: contracts.ada,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.ada[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.ada[97]}`,
+    },
+    displayName: 'ADA Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
   // {
   //   pid: 27,
   //   lpSymbol: QuoteToken.USDT,

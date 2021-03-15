@@ -89,11 +89,15 @@ export default {
   },
   eth: {
     56: '0x2170ed0880ac9a755fd29b2688956bd959f933f8',
-    97: '0x2170ed0880ac9a755fd29b2688956bd959f933f8'
+    97: ''
   },
   ethBnbLp: {
     56: '0x70d8929d04b60af4fb9b58713ebcf18765ade422',
-    97: '0x70d8929d04b60af4fb9b58713ebcf18765ade422'
+    97: ''
+  },
+  ethBusdLp: {
+    56: '0xd9a0d1f5e02de2403f68bb71a15f8847a854b494',
+    97: ''
   },
   fuel: {
     56: '0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a',

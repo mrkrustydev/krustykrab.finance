@@ -12,7 +12,7 @@ export const fetchFarmUserAllowances = async (account: string) => {
   const mrKrabsAddress = getMrKrabsAddress()
 
   const calls = farmsConfig.map((farm) => {
-    const lpContractAddress = farm.lpAddresses[CHAIN_ID]
+    const lpContractAddress = farm.isSingleAsset ? farm.tokenAddresses[CHAIN_ID] : farm.lpAddresses[CHAIN_ID]
     return { 
       address: lpContractAddress, 
       name: 'allowance', 
@@ -30,7 +30,7 @@ export const fetchFarmUserAllowances = async (account: string) => {
 
 export const fetchFarmUserTokenBalances = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
-    const lpContractAddress = farm.lpAddresses[CHAIN_ID]
+    const lpContractAddress = farm.isSingleAsset ? farm.tokenAddresses[CHAIN_ID] : farm.lpAddresses[CHAIN_ID]
     return {
       address: lpContractAddress,
       name: 'balanceOf',

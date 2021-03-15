@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { provider } from 'web3-core'
 import { getContract } from 'utils/erc20'
 import { Farm } from 'state/types'
-import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
+import { useFarmFromPid, useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import UnlockButton from 'components/UnlockButton'
 import { useApprove } from 'hooks/useApprove'
@@ -30,14 +30,19 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
   const { pid, lpAddresses } = useFarmFromSymbol(farm.lpSymbol)
+  const { tokenAddresses, isSingleAsset, depositFee } = useFarmFromPid(farm.pid)
   const { allowance, tokenBalance, stakedBalance, earnings } = useFarmUser(pid)
   const lpAddress = lpAddresses[process.env.REACT_APP_CHAIN_ID]
+  const tokenAddress = tokenAddresses[process.env.REACT_APP_CHAIN_ID]
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
 
   const lpContract = useMemo(() => {
-    return getContract(ethereum as provider, lpAddress)
-  }, [ethereum, lpAddress])
+    if (isSingleAsset) {
+      return getContract(ethereum as provider, tokenAddress);
+    }
+    return getContract(ethereum as provider, lpAddress);
+  }, [ethereum, lpAddress, isSingleAsset, tokenAddress])
 
   const { onApprove } = useApprove(lpContract)
 

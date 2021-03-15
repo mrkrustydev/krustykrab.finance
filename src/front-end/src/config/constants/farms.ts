@@ -1,6 +1,8 @@
 import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
+const lpAddBaseUrl = "https://practical-mclean-0711a0.netlify.app"
+
 const farms: FarmConfig[] = [
   {
     pid: 0,
@@ -11,7 +13,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.krusty[56]}`,
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.krusty[56]}`,
       97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.krusty[97]}`
     },
     displayName: 'KRUSTY',
@@ -27,7 +29,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: { 
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.krusty[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.krusty[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.krusty[97]}`
     },
     displayName: 'Krabby Patty Pool',
@@ -43,7 +45,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: { 
-      56: `https://exchange.pancakeswap.finance/#/add/${contracts.busd[56]}/${contracts.krusty[56]}`,
+      56: `${lpAddBaseUrl}/#/add/${contracts.busd[56]}/${contracts.krusty[56]}`,
       97: `https://www.streetswap.vip/#/add/${contracts.busd[97]}/${contracts.krusty[97]}`
     },
     displayName: 'Krabby Bucks Pool',
@@ -64,7 +66,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,  
     lpAddUrl: { 
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.busd[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.busd[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.busd[97]}`,
     },
     displayName: 'Krabby Combo Pool',
@@ -79,7 +81,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.eth[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.eth[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.eth[97]}`,
     },
     displayName: 'Krabby Deluxe Pool',
@@ -95,7 +97,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.dot[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.dot[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.dot[97]}`,
     },
     displayName: 'Dot Patty Pool',
@@ -111,7 +113,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.ada[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.ada[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.ada[97]}`,
     },
     displayName: 'Patrick Pool',
@@ -127,7 +129,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.btcb[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.btcb[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.btcb[97]}`,
     },
     displayName: 'Mr. Krabs Pool',
@@ -191,7 +193,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.cake[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.cake[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.cake[97]}`,
     },
     displayName: 'Kelp Cupcakes Pool',
@@ -207,7 +209,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.auto[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.auto[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.auto[97]}`,
     },
     displayName: 'Kelp Shake Pool',
@@ -223,7 +225,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/add/ETH/${contracts.fuel[56]}`,
+      56: `${lpAddBaseUrl}/#/add/ETH/${contracts.fuel[56]}`,
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.fuel[97]}`,
     },
     displayName: 'Sailors Surprise Pool',
@@ -239,7 +241,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.wbnb[56]}`,
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.wbnb[56]}`,
       97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.wbnb[97]}`,
     },
     displayName: 'WBNB Pool',
@@ -256,7 +258,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
-      56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.busd[56]}`,
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.busd[56]}`,
       97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.busd[97]}`,
     },
     displayName: 'BUSD Pool',
@@ -264,23 +266,23 @@ const farms: FarmConfig[] = [
     depositFee: 400,
     isSingleAsset: true
   },
-  // {
-  //   pid: 23,
-  //   lpSymbol: QuoteToken.ETH,
-  //   lpAddresses: contracts.eth,
-  //   tokenSymbol: 'ETH',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.ETH,
-  //   quoteTokenAdresses: contracts.eth,
-  //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.eth[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.eth[97]}`,
-  //   },
-  //   displayName: 'ETH Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
+  {
+    pid: 24,
+    lpSymbol: QuoteToken.ETH,
+    lpAddresses: contracts.ethBusdLp,
+    tokenSymbol: 'ETH',
+    tokenAddresses: contracts.eth,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.eth[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.eth[97]}`,
+    },
+    displayName: 'ETH Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
   // {
   //   pid: 2400,
   //   lpSymbol: QuoteToken.BTCB,
@@ -290,7 +292,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.BTCB,
   //   quoteTokenAdresses: contracts.btcb,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.btcb[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.btcb[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.btcb[97]}`,
   //   },
   //   displayName: 'BTCB Pool',
@@ -307,7 +309,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.BTCB,
   //   quoteTokenAdresses: contracts.btcb,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.dot[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dot[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dot[97]}`,
   //   },
   //   displayName: 'DOT Pool',
@@ -324,7 +326,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.ADA,
   //   quoteTokenAdresses: contracts.ada,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.ada[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.ada[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.ada[97]}`,
   //   },
   //   displayName: 'ADA Pool',
@@ -341,7 +343,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.USDT,
   //   quoteTokenAdresses: contracts.usdt,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.usdt[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdt[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdt[97]}`,
   //   },
   //   displayName: 'USDT Pool',
@@ -358,7 +360,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.DAI,
   //   quoteTokenAdresses: contracts.dai,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.dai[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dai[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dai[97]}`,
   //   },
   //   displayName: 'DAI Pool',
@@ -375,7 +377,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.USDC,
   //   quoteTokenAdresses: contracts.usdc,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.usdc[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdc[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdc[97]}`,
   //   },
   //   displayName: 'USDC Pool',
@@ -392,7 +394,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.CAKE,
   //   quoteTokenAdresses: contracts.cake,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.cake[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.cake[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.cake[97]}`,
   //   },
   //   displayName: 'CAKE Pool',
@@ -409,7 +411,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.AUTO,
   //   quoteTokenAdresses: contracts.auto,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.auto[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.auto[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.auto[97]}`,
   //   },
   //   displayName: 'AUTO Pool',
@@ -426,7 +428,7 @@ const farms: FarmConfig[] = [
   //   quoteTokenSymbol: QuoteToken.FUEL,
   //   quoteTokenAdresses: contracts.fuel,
   //   lpAddUrl: {
-  //     56: `https://exchange.pancakeswap.finance/#/swap?outputCurrency=${contracts.fuel[56]}`,
+  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.fuel[56]}`,
   //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.fuel[97]}`,
   //   },
   //   displayName: 'FUEL Pool',

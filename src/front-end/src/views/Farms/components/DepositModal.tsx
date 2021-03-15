@@ -27,6 +27,8 @@ interface DepositModalProps {
   isSingleAsset?: boolean
 }
 
+const ONE = new BigNumber(1)
+
 const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl, depositFee, isSingleAsset }) => {
   const [val, setVal] = useState('')
   const [fee, setFee] = useState('')
@@ -40,8 +42,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
     (e: React.FormEvent<HTMLInputElement>) => {
       setVal(e.currentTarget.value)
       if (depositFee) {
-        const deposit = new BigNumber(e.currentTarget.value)
-        const depFee = deposit.times(depositFee).div(10000).toString()
+        const depFee = formatDepositFee(depositFee, e.currentTarget.value)
         setFee(depFee)
       }
     },
@@ -50,13 +51,27 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
 
   const handleSelectMax = useCallback(() => {
     setVal(fullBalance)
-  }, [fullBalance, setVal])
+    if (depositFee) {
+      const depFee = formatDepositFee(depositFee, fullBalance)
+      setFee(depFee)
+    }
+  }, [fullBalance, setVal, setFee, depositFee])
+
+  const formatDepositFee = (f: number, b: string) => {
+    const deposit = new BigNumber(b)
+    const depFee = deposit.times(f).div(10000)
+    let depFeeStr = depFee.toFixed(6)
+    if (depFee.gte(ONE))
+      depFeeStr = depFee.toFixed(3)
+    
+    return depFeeStr
+  }
 
   return (
     <Modal 
       title={
         isSingleAsset ?
-          TranslateString(999, 'Stake tokens')
+          TranslateString(999, 'Stake tokens') 
         : TranslateString(999, 'Stake LP tokens')
       } 
       onDismiss={onDismiss}>

@@ -9,7 +9,7 @@ const StyledYoutubeCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px;
-  border: 1px solid ${({ theme }) => theme.isDark ? "#ff5b37" : "#b13f26"};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `
 
 const Row = styled.div`

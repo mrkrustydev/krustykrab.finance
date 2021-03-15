@@ -33,7 +33,6 @@ const Hero = styled.div`
   
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/landing-meat.png'), url('/landing-meat-right.png');
     background-position: left center, right center;
     height: 200px;
     padding-top: 0;

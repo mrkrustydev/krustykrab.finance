@@ -20,7 +20,8 @@ const StyledCakeStats = styled(Card)`
   background-position: top right;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `
 
 const Row = styled.div`
@@ -67,17 +68,20 @@ const CakeStats = () => {
         <Heading size="xl" mb="18px">
           {TranslateString(534, 'Krusty Krab Stats')}
         </Heading>
-        <Row>
-          <Text fontSize="14px" style={{width:'40%', display:'inline-flex'}}>{TranslateString(536, 'Total KRUSTY Supply')}</Text>
+        <Row style={{display:'inline-flex', width:'100%'}}>
+          <Text fontSize="14px" style={{width:'40%', display:'inline-flex'}}>
+            {TranslateString(536, 'Total KRUSTY Supply')}
+          </Text>
           {krustySupply && 
-          <div style={{width:'60%', display:'inline-flex'}}>
+          <div style={{width:'auto', display:'inline-flex'}}>
             <CardValue fontSize="14px" value={krustySupply} />
           </div>
           }
         </Row>
-        <Row >
+        <br/>
+        <Row style={{display:'inline-flex', width:'100%'}}>
           <Text style={{width:'40%', display:'inline-flex'}} fontSize="14px">{TranslateString(540, 'New KRUSTY/block')}</Text>
-          <div style={{width:'60%', display:'inline-flex'}}>
+          <div style={{width:'auto', display:'inline-flex'}}>
             <CardValue fontSize="14px" decimals={1} value={krustyPerBlock.toNumber()} />
           </div>
         </Row>

@@ -9,7 +9,7 @@ const useTheme = () => {
   
   theme.colors = 
   {
-    primary: isDark?'#e7e8fc':'#ffffff',
+    primary: isDark?'#ffffff':'#000000',
     primaryBright: '#ffa500',
     primaryDark: '#38220f',
     secondary: isDark?'#919dde':'#4764c5',
@@ -25,7 +25,7 @@ const useTheme = () => {
     text: isDark?'#e7e8fc':'#223872',
     textDisabled: isDark?'#d0d0d0':'#090909',
     textSubtle: isDark?'#ff8b67':'#b13f26',
-    borderColor: '#dc2b2b',
+    borderColor: isDark?'#d3d4f3':'#122862',
     card: '#e7e8fc',
     binance: '#c0d000',
     gradients: {
@@ -34,6 +34,8 @@ const useTheme = () => {
   } 
 
   theme.nav.background = theme.colors.invertedContrast;
+  theme.card.background = theme.colors.background;
+  theme.modal.background = theme.colors.background;
 
   return { isDark, toggleTheme, theme }
 }

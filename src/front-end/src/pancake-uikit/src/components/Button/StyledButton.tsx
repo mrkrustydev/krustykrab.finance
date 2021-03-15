@@ -50,8 +50,6 @@ const StyledButton = styled.button<ButtonProps>`
   border: ${getButtonVariantProp("border")};
   border-radius: 16px;
   box-shadow: ${getButtonVariantProp("boxShadow")};
-  background-color:#4764c5!important;
-  color:#eaebff!important;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;

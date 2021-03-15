@@ -59,7 +59,7 @@ const FCard = styled.div`
   align-self: baseline;
   background: ${(props) => props.theme.card.background};
   border-radius: 0px;
-  border: 1px solid ${({ theme }) => theme.isDark ? "#ff5b37" : "#b13f26"};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
   box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1), 0px 1px 1px rgba(25, 19, 38, 0.05);
   display: flex;
   flex-direction: column;

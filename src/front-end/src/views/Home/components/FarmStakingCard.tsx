@@ -16,7 +16,7 @@ const StyledFarmStakingCard = styled(Card)`
   min-height: 376px;
   display: block;
   border-radius: 0px;
-  border: 1px solid ${({ theme }) => theme.isDark ? "#ff5b37" : "#b13f26"};
+  border: 1px solid ${({ theme }) => theme.colors.borderColor};
 `
 
 const Block = styled.div`

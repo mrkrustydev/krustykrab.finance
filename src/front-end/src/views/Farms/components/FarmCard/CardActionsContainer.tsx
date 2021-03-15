@@ -65,6 +65,7 @@ const CardActions: React.FC<FarmCardActionsProps> = ({ farm, ethereum, account, 
         pid={pid}
         addLiquidityUrl={addLiquidityUrl}
         isSingleAsset={farm.isSingleAsset}
+        depositFee={farm.depositFee}
       />
     ) : (
       <Button mt="8px" fullWidth disabled={requestedApproval} onClick={handleApprove} className='unlockButton'>

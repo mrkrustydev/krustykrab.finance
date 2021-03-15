@@ -27,7 +27,7 @@ const fetchFarms = async () => {
         },
         // Balance of LP tokens in the master sousChef contract
         {
-          address: lpAdress,
+          address: farmConfig.isSingleAsset ? farmConfig.tokenAddresses[CHAIN_ID] : lpAdress,
           name: 'balanceOf',
           params: [getMrKrabsAddress()],
         },

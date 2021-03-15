@@ -4,11 +4,12 @@ import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
 import BigNumber from 'bignumber.js'
 import state from 'state'
-import { usePriceBnbBusd, useFarms } from 'state/hooks'
+import { usePriceBnbBusd, useFarms, useTotalValue } from 'state/hooks'
 import { QuoteToken } from 'config/constants/types'
 import useRefresh from 'hooks/useRefresh'
 import fetchFarms from 'state/farms/fetchFarms'
 import { fetchFarmsPublicDataAsync } from 'state/farms/index'
+import CardValue from './CardValue'
 import { Card, CardBody, Heading, Text } from '../../../pancake-uikit/src'
 
 const StyledTotalValueLockedCard = styled(Card)`
@@ -33,31 +34,8 @@ const TotalValueLockedCard = () => {
     suffix: ''
   }
 
-  const bnbPrice = usePriceBnbBusd()
   const TranslateString = useI18n()
-  
-
-  
-  const dispatch = useDispatch()
-  const { fastRefresh } = useRefresh()
-  useEffect(() => {
-      dispatch(fetchFarmsPublicDataAsync())
-  }, [dispatch, fastRefresh])
-
-  const farms = useFarms()
-  const totalValuLocked = useCallback((farmsToInclude, quoteTokenPrice) => {
-    let tvl = new BigNumber(0)
-    farmsToInclude.forEach((farm) => {
-        let liquidity = new BigNumber(farm.lpTotalInQuoteToken)
-        if (farm.quoteTokenSymbol === QuoteToken.BNB) {
-          liquidity = liquidity.times(quoteTokenPrice)
-        } 
-        tvl = tvl.plus(liquidity)
-      })
-      return tvl
-    },
-    []
-  )
+  const totalValue = useTotalValue()
 
   return (
     <StyledTotalValueLockedCard>
@@ -65,8 +43,8 @@ const TotalValueLockedCard = () => {
         <Heading size="lg" mb="24px">
           {TranslateString(999, 'Total Value Locked (TVL)')}
         </Heading>
-        <Heading size="xl">{`$${totalValuLocked(farms, bnbPrice).toFormat(2, fmt).toString()}`}</Heading>
-        <Text color="textSubtle">{TranslateString(999, 'Across all LPs and KRUSTY Pools')}</Text>
+        <CardValue value={totalValue.toNumber()} prefix="$" decimals={2} />
+        <Text color="textSubtle">{TranslateString(999, 'Across all Farms and Pools')}</Text>
       </CardBody>
     </StyledTotalValueLockedCard>
   )

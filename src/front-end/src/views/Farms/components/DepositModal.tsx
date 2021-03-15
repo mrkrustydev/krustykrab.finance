@@ -12,10 +12,12 @@ interface DepositModalProps {
   onDismiss?: () => void
   tokenName?: string
   addLiquidityUrl?: string
+  depositFee?: number
 }
 
-const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl }) => {
+const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '', addLiquidityUrl, depositFee }) => {
   const [val, setVal] = useState('')
+  const [fee, setFee] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
   const fullBalance = useMemo(() => {
@@ -25,8 +27,13 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       setVal(e.currentTarget.value)
+      if (depositFee) {
+        const deposit = new BigNumber(e.currentTarget.value)
+        const depFee = deposit.times(depositFee).div(10000).toString()
+        setFee(depFee)
+      }
     },
-    [setVal],
+    [setVal, setFee, depositFee],
   )
 
   const handleSelectMax = useCallback(() => {
@@ -44,6 +51,14 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
         addLiquidityUrl={addLiquidityUrl}
         inputTitle={TranslateString(999, 'Stake')}
       />
+      {depositFee ? 
+      <div>
+          <span>{TranslateString(999, 'Deposit Fee: ')} {fee} {tokenName}</span>
+          <span>{TranslateString(999, 'This fee will be used 100% for buyback and burn.)')}</span>
+      </div>
+        :
+        <></>
+      }
       <ModalActions>
         <Button variant="secondary" className='unlockButton' onClick={onDismiss} fullWidth>
           {TranslateString(462, 'Cancel')}

@@ -3,7 +3,7 @@ import BigNumber from 'bignumber.js'
 import { kebabCase } from 'lodash'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useSelector, useDispatch } from 'react-redux'
-import { Team } from 'config/constants/types'
+import { QuoteToken, Team } from 'config/constants/types'
 import useRefresh from 'hooks/useRefresh'
 import {
   fetchFarmsPublicDataAsync,
@@ -170,4 +170,26 @@ export const useTeams = () => {
   }, [dispatch])
 
   return { teams: data, isInitialized, isLoading }
+}
+
+export const useTotalValue = (): BigNumber => {
+  const farms = useFarms();
+  const bnbPrice = usePriceBnbBusd();
+  const cakePrice = usePriceKrustyBusd();
+  let value = new BigNumber(0);
+  for (let i = 0; i < farms.length; i++) {
+    const farm = farms[i]
+    if (farm.lpTotalInQuoteToken) {
+      let val;
+      if (farm.quoteTokenSymbol === QuoteToken.BNB) {
+        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+      } else if (farm.quoteTokenSymbol === QuoteToken.KRUSTY) {
+        val = (cakePrice.times(farm.lpTotalInQuoteToken));
+      } else {
+        val = (farm.lpTotalInQuoteToken);
+      }
+      value = value.plus(val);
+    }
+  }
+  return value;
 }

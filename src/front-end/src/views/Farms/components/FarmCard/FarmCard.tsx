@@ -141,6 +141,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, krustyPrice, bnbPric
     <FCard>
       {farm.tokenSymbol === 'KRUSTY' && <StyledCardAccent />}
       <CardHeading
+        pid={farm.pid}
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
         isCommunityFarm={farm.isCommunity}

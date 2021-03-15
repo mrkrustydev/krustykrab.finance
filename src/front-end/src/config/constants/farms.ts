@@ -7,11 +7,11 @@ const farms: FarmConfig[] = [
   {
     pid: 0,
     lpSymbol: 'KRUSTY',
-    lpAddresses: contracts.krusty,
-    tokenSymbol: 'PATTY',
+    lpAddresses: contracts.krustyBusdLp,
+    tokenSymbol: 'KRUSTY',
     tokenAddresses: contracts.krusty,
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
       56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.krusty[56]}`,
       97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.krusty[97]}`
@@ -230,7 +230,7 @@ const farms: FarmConfig[] = [
     },
     displayName: 'Sailors Surprise Pool',
     isCommunity: true,
-    depositFee: 4
+    depositFee: 400
   },
   {
     pid: 22,

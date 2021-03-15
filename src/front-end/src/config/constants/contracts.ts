@@ -75,6 +75,10 @@ export default {
     56: '0xa527a61703d82139f8a06bc30097cc9caa2df5a6',
     97: ''
   },
+  cakeBusdLp: {
+    56: '0x0ed8e0a2d99643e1e65cca22ed4424090b8b7458',
+    97: ''
+  },
   bifiBnbLp: {
     56: '0xd132d2c24f29ee8abb64a66559d1b7aa627bd7fd',
     97: ''

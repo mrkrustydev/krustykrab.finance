@@ -351,91 +351,91 @@ const farms: FarmConfig[] = [
     depositFee: 400,
     isSingleAsset: true
   },
-  // {
-  //   pid: 28,
-  //   lpSymbol: QuoteToken.DAI,
-  //   lpAddresses: contracts.dai,
-  //   tokenSymbol: 'DAI',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.DAI,
-  //   quoteTokenAdresses: contracts.dai,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dai[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dai[97]}`,
-  //   },
-  //   displayName: 'DAI Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 29,
-  //   lpSymbol: QuoteToken.USDC,
-  //   lpAddresses: contracts.usdc,
-  //   tokenSymbol: 'USDC',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.USDC,
-  //   quoteTokenAdresses: contracts.usdc,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdc[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdc[97]}`,
-  //   },
-  //   displayName: 'USDC Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 30,
-  //   lpSymbol: QuoteToken.CAKE,
-  //   lpAddresses: contracts.cake,
-  //   tokenSymbol: 'CAKE',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.CAKE,
-  //   quoteTokenAdresses: contracts.cake,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.cake[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.cake[97]}`,
-  //   },
-  //   displayName: 'CAKE Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 31,
-  //   lpSymbol: QuoteToken.AUTO,
-  //   lpAddresses: contracts.auto,
-  //   tokenSymbol: 'AUTO',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.AUTO,
-  //   quoteTokenAdresses: contracts.auto,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.auto[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.auto[97]}`,
-  //   },
-  //   displayName: 'AUTO Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
-  // {
-  //   pid: 32,
-  //   lpSymbol: QuoteToken.FUEL,
-  //   lpAddresses: contracts.fuel,
-  //   tokenSymbol: 'FUEL',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.FUEL,
-  //   quoteTokenAdresses: contracts.fuel,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.fuel[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.fuel[97]}`,
-  //   },
-  //   displayName: 'FUEL Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
+  {
+    pid: 29,
+    lpSymbol: QuoteToken.DAI,
+    lpAddresses: contracts.daiBusdLp,
+    tokenSymbol: 'DAI',
+    tokenAddresses: contracts.dai,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.dai[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.dai[97]}`,
+    },
+    displayName: 'DAI Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 30,
+    lpSymbol: QuoteToken.USDC,
+    lpAddresses: contracts.usdcBusdLp,
+    tokenSymbol: 'USDC',
+    tokenAddresses: contracts.usdc,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdc[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdc[97]}`,
+    },
+    displayName: 'USDC Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 31,
+    lpSymbol: QuoteToken.CAKE,
+    lpAddresses: contracts.cakeBusdLp,
+    tokenSymbol: 'CAKE',
+    tokenAddresses: contracts.cake,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.cake[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.cake[97]}`,
+    },
+    displayName: 'CAKE Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 32,
+    lpSymbol: QuoteToken.AUTO,
+    lpAddresses: contracts.autoBusdLp,
+    tokenSymbol: 'AUTO',
+    tokenAddresses: contracts.auto,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.auto[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.auto[97]}`,
+    },
+    displayName: 'AUTO Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
+  {
+    pid: 33,
+    lpSymbol: QuoteToken.FUEL,
+    lpAddresses: contracts.fuelBusdLp,
+    tokenSymbol: 'FUEL',
+    tokenAddresses: contracts.auto,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.fuel[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.fuel[97]}`,
+    },
+    displayName: 'FUEL Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
 ]
 
 export default farms

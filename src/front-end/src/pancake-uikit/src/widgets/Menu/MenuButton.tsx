@@ -5,6 +5,7 @@ const MenuButton = styled(Button)`
   color: #ffffff!important;
   padding: 0 8px;
   border-radius: 8px;
+  background-color:rgba(0,0,0,0)!important;
 `;
 MenuButton.defaultProps = {
   variant: "text",

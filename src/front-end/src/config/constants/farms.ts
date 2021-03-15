@@ -334,23 +334,23 @@ const farms: FarmConfig[] = [
     depositFee: 400,
     isSingleAsset: true
   },
-  // {
-  //   pid: 27,
-  //   lpSymbol: QuoteToken.USDT,
-  //   lpAddresses: contracts.ada,
-  //   tokenSymbol: 'USDT',
-  //   tokenAddresses: contracts.mrKrabs,
-  //   quoteTokenSymbol: QuoteToken.USDT,
-  //   quoteTokenAdresses: contracts.usdt,
-  //   lpAddUrl: {
-  //     56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdt[56]}`,
-  //     97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdt[97]}`,
-  //   },
-  //   displayName: 'USDT Pool',
-  //   isCommunity: true,
-  //   depositFee: 400,
-  //   isSingleAsset: true
-  // },
+  {
+    pid: 28,
+    lpSymbol: QuoteToken.USDT,
+    lpAddresses: contracts.usdtBusdLp,
+    tokenSymbol: 'USDT',
+    tokenAddresses: contracts.usdt,
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+    lpAddUrl: {
+      56: `${lpAddBaseUrl}/#/swap?outputCurrency=${contracts.usdt[56]}`,
+      97: `https://www.streetswap.vip/#/swap?outputCurrency=${contracts.usdt[97]}`,
+    },
+    displayName: 'USDT Pool',
+    isCommunity: true,
+    depositFee: 400,
+    isSingleAsset: true
+  },
   // {
   //   pid: 28,
   //   lpSymbol: QuoteToken.DAI,

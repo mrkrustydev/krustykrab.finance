@@ -424,7 +424,7 @@ const farms: FarmConfig[] = [
     lpSymbol: QuoteToken.FUEL,
     lpAddresses: contracts.fuelBusdLp,
     tokenSymbol: 'FUEL',
-    tokenAddresses: contracts.auto,
+    tokenAddresses: contracts.fuel,
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {

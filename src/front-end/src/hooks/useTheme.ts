@@ -19,7 +19,7 @@ const useTheme = () => {
     warning: '#4ba9fb',
     contrast: isDark?'#4764c5':'#4764c5',
     invertedContrast: isDark?'#223872':'#a1adee',
-    input: '#66779e',
+    input: 'rgba(0,0,0,.4)',
     background: isDark?'#122862':'#d3d4f3',
     backgroundDisabled: isDark?'#090909':'#909090',
     text: isDark?'#e7e8fc':'#000000',

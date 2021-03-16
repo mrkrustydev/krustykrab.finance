@@ -1,7 +1,7 @@
 import contracts from './contracts'
 import { FarmConfig, QuoteToken } from './types'
 
-const lpAddBaseUrl = "https://practical-mclean-0711a0.netlify.app"
+const lpAddBaseUrl = "https://exchange.thekrustykrab.finance"
 
 const farms: FarmConfig[] = [
   {
@@ -146,7 +146,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
-      56: `https://www.streetswap.vip/#/add/${contracts.usdt[56]}/${contracts.busd[56]}`,
+      56: `${lpAddBaseUrl}/#/add/${contracts.usdt[56]}/${contracts.busd[56]}`,
       97: `https://www.streetswap.vip/#/add/${contracts.usdt[97]}/${contracts.busd[97]}`,
     },
     displayName: 'Plankton Pool',
@@ -162,7 +162,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
-      56: `https://www.streetswap.vip/#/add/${contracts.dai[56]}/${contracts.busd[56]}`,
+      56: `${lpAddBaseUrl}/#/add/${contracts.dai[56]}/${contracts.busd[56]}`,
       97: `https://www.streetswap.vip/#/add/${contracts.dai[97]}/${contracts.busd[97]}`,
     },
     displayName: 'Kelp Rings Pool',
@@ -178,7 +178,7 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
     lpAddUrl: {
-      56: `https://www.streetswap.vip/#/add/${contracts.usdc[56]}/${contracts.busd[56]}`,
+      56: `${lpAddBaseUrl}/#/add/${contracts.usdc[56]}/${contracts.busd[56]}`,
       97: `https://www.streetswap.vip/#/add/${contracts.usdc[97]}/${contracts.busd[97]}`,
     },
     displayName: 'Coral Bits Pool',

@@ -4,8 +4,7 @@ pragma solidity 0.6.12;
 import "./libs/token/BEP20/BEP20.sol";
 
 // KrustyToken with Governance.
-// contract KrustyToken is BEP20('krustykrab.finance', 'KRUSTY') {
-contract KrustyToken is BEP20('kk.f', 'KTEST') {
+contract KrustyToken is BEP20('thekrustykrab.finance', 'KRUSTY') {
     /// @dev Creates `_amount` token to `_to`. Must only be called by the owner (PitMaster).
     function mint(address _to, uint256 _amount) public onlyOwner {
         _mint(_to, _amount);
@@ -241,84 +240,5 @@ contract KrustyToken is BEP20('kk.f', 'KTEST') {
         uint256 chainId;
         assembly { chainId := chainid() }
         return chainId;
-    }
-}
-
-
-// add crowdsale
-contract Presale is Ownable {
-    address payable preSaleOwner;
-    address me = address(this);
-    
-    // *** Config ***
-    uint startPresale = 1613271120;           // unix timestamp for presale to go live
-    uint256 presaleTokenAmount = 12500 ether; // 12,500 token presale
-    uint256 pricePresale = 4;                 // 0.04 BNB PER | 1 BNB = 25 KRUSTY - 500 BNB Hard Cap
-    uint256 multiplierPresale = 100;          // change to multiply above price rate
-    uint256 maxPerWallet = 10 ether;           // Max 10 BNB per Wallet
-    // --- Config ---
-
-    KrustyToken token = new KrustyToken();
-
-    mapping(address => bool) public isWHITELIST;
-    mapping(address => uint256) public amtWHITELIST;
-    bool whiteListOver = false;
-    
-    constructor() public {
-        preSaleOwner = msg.sender;
-        
-        // mint 1 token to deployer for liquidity pool setup
-        token.mint(preSaleOwner, 1 ether);
-
-        // mint main presaleTokenAmount and keep in presale contract
-        token.mint(me, presaleTokenAmount);
-        
-        isWHITELIST[msg.sender] = true;
-        amtWHITELIST[msg.sender] = 0;
-        token.transferOwnership(preSaleOwner);
-    }
-
-    receive() external payable {
-        require(startPresale <= now, "Presale has not yet started");
-        require(isWHITELIST[msg.sender] || whiteListOver, "You are not whitelisted!");
-        uint amount = msg.value / pricePresale * multiplierPresale;
-        require(amount <= token.balanceOf(address(this)), "Insufficient token balance in ICO");
-        require((amount + amtWHITELIST[msg.sender]) <= (maxPerWallet / pricePresale * multiplierPresale), "Over Max Per Wallet");
-        amtWHITELIST[msg.sender] = amtWHITELIST[msg.sender] + amount;
-        token.transfer(msg.sender, amount);
-    }
-    
-    function manualGetETH() public payable onlyOwner {
-        preSaleOwner.transfer(address(this).balance);
-    }
-    
-    function getLeftTokens() public onlyOwner {
-        token.transfer(preSaleOwner, token.balanceOf(address(this)));
-    }
-
-    function batchAddWhitelisted(address[] calldata addrs) public onlyOwner {
-        for(uint i=0;i<addrs.length;i++) {
-            isWHITELIST[addrs[i]] = true;
-            amtWHITELIST[addrs[i]] = 0;
-        }
-    }
-
-    function endWhiteListPhase() public onlyOwner {
-        whiteListOver = true;
-    }
-    
-    
-    // Utils
-    function getStartICO() public view returns (uint) {
-        return startPresale - now;
-    }
-    function tokenAddress() public view returns (address){
-        return address(token);
-    }
-    function ICO_deposit() public view returns(uint){
-        return token.balanceOf(address(this));
-    }
-    function myBalance() public view returns(uint){
-        return token.balanceOf(msg.sender);
     }
 }

@@ -64,13 +64,13 @@ const StyledButton = styled.button<ButtonProps>`
   outline: 0;
   padding: ${({ size }) => (size === "sm" ? "0 16px" : "0 24px")};
   transition: background-color 0.2s;
-  background-color: rgba(0,0,0,0)!important;
+  background-color: ${({ theme }) => theme.colors.contrast};
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
-
+  color: ${({ theme }) => theme.colors.text};
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
     border-color: ${getButtonVariantProp("borderColorHover")};
     background-color:#818dce!important;
-    color:#ffffff!important;
+   
   }
 
   &:focus:not(:active) {

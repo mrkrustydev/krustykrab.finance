@@ -12,11 +12,11 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://practical-mclean-0711a0.netlify.app/#/swap',
+        href: 'https://exchange.thekrustykrab.finance/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://practical-mclean-0711a0.netlify.app/#/pool',
+        href: 'https://exchange.thekrustykrab.finance/#/pool',
       },
     ],
   },
@@ -95,7 +95,7 @@ const config: MenuEntry[] = [
       // },
       {
         label: "Medium",
-        href: "https://krustykrabdefi.medium.com/",
+        href: "https://krustykrabfinance.medium.com/",
       },
     ],
   },

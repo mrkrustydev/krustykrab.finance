@@ -12,11 +12,11 @@ export default {
     97: '0x0f5b314aCABE9886dd9a8C961E5aa834Dd3656eA',
   },
   krustyBnbLp: {
-    56: '0x764091cd19fba64b978e8efe5b8d40ddbe704f3c',
+    56: '0x577373cc1429655491a7a71d6718133f20f0f3b7', // '0x764091cd19fba64b978e8efe5b8d40ddbe704f3c',
     97: '0x5add30649eec3d78d3c5065f01eae2d3a15f5f0f',
   },
   krustyBusdLp: {
-    56: '0x3808a9632f64d38be907d33fa37cf6d7efedd071',
+    56: '0x538e586e6a25c1e81e8d47ddd49b4b2eb74174e3', // '0x3808a9632f64d38be907d33fa37cf6d7efedd071',
     97: '0xb3985b3202be3deffbe2aeff67167b24df32822e',
   },
   wbnb: {

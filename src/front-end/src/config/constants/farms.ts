@@ -70,7 +70,8 @@ const farms: FarmConfig[] = [
       97: `https://www.streetswap.vip/#/add/BNB/${contracts.busd[97]}`,
     },
     displayName: 'Krabby Combo Pool',
-    isCommunity: false
+    isCommunity: false,
+    depositFee: 400,
   },
   {
     pid: 4,

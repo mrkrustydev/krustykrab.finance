@@ -22,7 +22,7 @@ const useTheme = () => {
     input: '#66779e',
     background: isDark?'#122862':'#d3d4f3',
     backgroundDisabled: isDark?'#090909':'#909090',
-    text: isDark?'#e7e8fc':'#021852',
+    text: isDark?'#e7e8fc':'#000000',
     textDisabled: isDark?'#d0d0d0':'#090909',
     textSubtle: isDark?'#ff8b67':'#b13f26',
     borderColor: isDark?'#d3d4f3':'#122862',

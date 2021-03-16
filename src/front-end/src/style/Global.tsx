@@ -32,19 +32,19 @@ const GlobalStyle = createGlobalStyle`
   }
   .unlockButton{
     background-color:#4764c5!important;
-    color:#eaebff!important;
+
   }
   .unlockButton:hover{
     background-color:#818dce!important;
-    color:#ffffff!important;
+
   }
   .cancelButton{
     background-color:#4764c5!important;
-    color:#eaebff!important;
+
   }
   .cancelButton:hover{
     background-color:#818dce!important;
-    color:#ffffff!important;
+ 
   }
 `
 

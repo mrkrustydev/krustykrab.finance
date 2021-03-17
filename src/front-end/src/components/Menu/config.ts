@@ -85,10 +85,10 @@ const config: MenuEntry[] = [
     label: "More",
     icon: "MoreIcon",
     items: [
-      // {
-      //   label: "Github",
-      //   href: "https://voting.pancakeswap.finance",
-      // },
+       {
+         label: "Github",
+         href: "https://github.com/mrkrustydev/krustykrab.finance",
+       },
       // {
       //   label: "Docs",
       //   href: "https://github.com/pancakeswap",

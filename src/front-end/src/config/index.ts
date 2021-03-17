@@ -5,7 +5,7 @@ BigNumber.config({
   DECIMAL_PLACES: 80,
 })
 
-export const KRUSTY_PER_BLOCK = new BigNumber(4)
+export const KRUSTY_PER_BLOCK = new BigNumber(2)
 export const BLOCKS_PER_YEAR = new BigNumber(10512000)
 export const BSC_BLOCK_TIME = 3
 export const KRUSTY_POOL_PID = 1

@@ -90,7 +90,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 13,
+    pid: 5,
     lpSymbol: 'DOT-BNB LP',
     lpAddresses: contracts.dotBnbLp,
     tokenSymbol: 'DOT',
@@ -106,7 +106,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 14,
+    pid: 6,
     lpSymbol: 'ADA-BNB LP',
     lpAddresses: contracts.adaBnbLp,
     tokenSymbol: 'ADA',
@@ -122,7 +122,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 15,
+    pid: 7,
     lpSymbol: 'BTCB-BNB LP',
     lpAddresses: contracts.btcbBnbLp,
     tokenSymbol: 'BTCB',
@@ -138,7 +138,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 16,
+    pid: 8,
     lpSymbol: 'USDT-BUSD LP',
     lpAddresses: contracts.usdtBusdLp,
     tokenSymbol: 'USDT',
@@ -154,7 +154,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 17,
+    pid: 9,
     lpSymbol: 'DAI-BUSD LP',
     lpAddresses: contracts.daiBusdLp,
     tokenSymbol: 'DAI',
@@ -170,7 +170,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 18,
+    pid: 10,
     lpSymbol: 'USDC-BUSD LP',
     lpAddresses: contracts.usdcBusdLp,
     tokenSymbol: 'USDC',
@@ -186,7 +186,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 19,
+    pid: 11,
     lpSymbol: 'CAKE-BNB LP',
     lpAddresses: contracts.cakeBnbLp,
     tokenSymbol: 'CAKE',
@@ -202,7 +202,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 20,
+    pid: 12,
     lpSymbol: 'AUTO-BNB LP',
     lpAddresses: contracts.autoBnbLp,
     tokenSymbol: 'AUTO',
@@ -218,7 +218,7 @@ const farms: FarmConfig[] = [
     depositFee: 400,
   },
   {
-    pid: 21,
+    pid: 15,
     lpSymbol: 'FUEL-BNB LP',
     lpAddresses: contracts.fuelBnbLp,
     tokenSymbol: 'FUEL',
@@ -234,7 +234,7 @@ const farms: FarmConfig[] = [
     depositFee: 400
   },
   {
-    pid: 22,
+    pid: 16,
     lpSymbol: QuoteToken.WBNB,
     lpAddresses: contracts.bnbBusdLp,
     tokenSymbol: 'WBNB',
@@ -251,7 +251,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 23,
+    pid: 17,
     lpSymbol: QuoteToken.BUSD,
     lpAddresses: contracts.krustyBusdLp,
     tokenSymbol: 'BUSD',
@@ -268,7 +268,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 24,
+    pid: 18,
     lpSymbol: QuoteToken.ETH,
     lpAddresses: contracts.ethBusdLp,
     tokenSymbol: 'ETH',
@@ -285,7 +285,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 25,
+    pid: 19,
     lpSymbol: QuoteToken.BTCB,
     lpAddresses: contracts.btcbBnbLp,
     tokenSymbol: 'BTCB',
@@ -319,7 +319,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 27,
+    pid: 20,
     lpSymbol: QuoteToken.ADA,
     lpAddresses: contracts.adaBusdLp,
     tokenSymbol: 'ADA',
@@ -336,7 +336,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 28,
+    pid: 21,
     lpSymbol: QuoteToken.USDT,
     lpAddresses: contracts.usdtBusdLp,
     tokenSymbol: 'USDT',
@@ -353,7 +353,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 29,
+    pid: 22,
     lpSymbol: QuoteToken.DAI,
     lpAddresses: contracts.daiBusdLp,
     tokenSymbol: 'DAI',
@@ -370,7 +370,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 30,
+    pid: 23,
     lpSymbol: QuoteToken.USDC,
     lpAddresses: contracts.usdcBusdLp,
     tokenSymbol: 'USDC',
@@ -387,7 +387,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 31,
+    pid: 24,
     lpSymbol: QuoteToken.CAKE,
     lpAddresses: contracts.cakeBusdLp,
     tokenSymbol: 'CAKE',
@@ -404,7 +404,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 32,
+    pid: 25,
     lpSymbol: QuoteToken.AUTO,
     lpAddresses: contracts.autoBusdLp,
     tokenSymbol: 'AUTO',
@@ -421,7 +421,7 @@ const farms: FarmConfig[] = [
     isSingleAsset: true
   },
   {
-    pid: 33,
+    pid: 13,
     lpSymbol: QuoteToken.FUEL,
     lpAddresses: contracts.fuelBusdLp,
     tokenSymbol: 'FUEL',
